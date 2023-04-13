@@ -2,7 +2,7 @@ package com.pil.tp_04.mvp.model
 
 import com.pil.tp_04.mvp.contract.MainContract
 
-class MainModel : MainContract.Model {
+class CountModel : MainContract.Model {
     override var counter: Int = ZERO_INT
 
     override fun increment(inputValue: Int) {

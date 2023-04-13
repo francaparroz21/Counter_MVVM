@@ -1,7 +1,7 @@
 package com.pil.tp_04.mvp.presenter
 
 import com.pil.tp_04.mvp.contract.MainContract
-import com.pil.tp_04.mvp.model.MainModel
+import com.pil.tp_04.mvp.model.CountModel
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -16,7 +16,7 @@ class MainPresenterTest {
 
     @Before
     fun setup() {
-        presenter = MainPresenter(MainModel(), view)
+        presenter = MainPresenter(CountModel(), view)
 
         verify { view.onIncrementButtonPressed(any()) }
         verify { view.onDecrementButtonPressed(any()) }
