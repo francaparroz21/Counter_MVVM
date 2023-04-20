@@ -1,7 +1,7 @@
-package com.pil.tp_04.mvp.contract
+package com.pil.tp_04.mvvm.contract
 
 import androidx.lifecycle.LiveData
-import com.pil.tp_04.mvp.viewmodel.CounterViewModel
+import com.pil.tp_04.mvvm.viewmodel.CounterViewModel
 
 interface MainContract {
     interface Model {

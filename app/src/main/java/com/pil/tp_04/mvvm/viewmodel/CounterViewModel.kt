@@ -1,9 +1,9 @@
-package com.pil.tp_04.mvp.viewmodel
+package com.pil.tp_04.mvvm.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pil.tp_04.mvp.contract.MainContract
+import com.pil.tp_04.mvvm.contract.MainContract
 
 class CounterViewModel(private val model: MainContract.Model) : ViewModel(),
     MainContract.ViewModel {

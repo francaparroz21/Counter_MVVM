@@ -1,9 +1,9 @@
-package com.pil.tp_04.mvp.viewmodel.factory
+package com.pil.tp_04.mvvm.viewmodel.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.pil.tp_04.mvp.contract.MainContract
-import com.pil.tp_04.mvp.viewmodel.CounterViewModel
+import com.pil.tp_04.mvvm.contract.MainContract
+import com.pil.tp_04.mvvm.viewmodel.CounterViewModel
 
 class ViewModelFactory(private val params: Array<Any>):ViewModelProvider.Factory {
 
