@@ -14,7 +14,7 @@ interface MainContract {
     interface ViewModel {
         fun getValue(): LiveData<CounterViewModel.CounterData>
         fun resetValue()
-        fun incValue()
-        fun decValue()
+        fun incValue(inputValue: Int)
+        fun decValue(inputValue: Int)
     }
 }

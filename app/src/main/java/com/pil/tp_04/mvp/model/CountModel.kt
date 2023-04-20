@@ -3,7 +3,7 @@ package com.pil.tp_04.mvp.model
 import com.pil.tp_04.mvp.contract.MainContract
 
 class CountModel : MainContract.Model {
-    override var counter: Int = ZERO_INT
+    override var counter: Int = ZERO
 
     override fun increment(inputValue: Int) {
         counter += inputValue
@@ -14,10 +14,10 @@ class CountModel : MainContract.Model {
     }
 
     override fun reset() {
-        counter = ZERO_INT
+        counter = ZERO
     }
 
     companion object {
-        private const val ZERO_INT = 0
+        private const val ZERO = 0
     }
 }

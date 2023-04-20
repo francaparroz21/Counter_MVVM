@@ -5,7 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.pil.tp_04.mvp.contract.MainContract
 
-class CounterViewModel(private val model: MainContract.Model) : ViewModel(),MainContract.ViewModel {
+class CounterViewModel(private val model: MainContract.Model) : ViewModel(),
+    MainContract.ViewModel {
     private val mutableLiveData: MutableLiveData<CounterData> = MutableLiveData()
     override fun getValue(): LiveData<CounterData> {
         return mutableLiveData
@@ -16,13 +17,13 @@ class CounterViewModel(private val model: MainContract.Model) : ViewModel(),Main
         mutableLiveData.value = CounterData(CounterState.INITIAL)
     }
 
-    override fun incValue() {
-        model.increment()
+    override fun incValue(inputValue: Int) {
+        model.increment(inputValue)
         mutableLiveData.value = CounterData(CounterState.INC, model.counter)
     }
 
-    override fun decValue() {
-        model.decrement()
+    override fun decValue(inputValue: Int) {
+        model.decrement(inputValue)
         mutableLiveData.value = CounterData(CounterState.DEC, model.counter)
     }
 
@@ -34,6 +35,6 @@ class CounterViewModel(private val model: MainContract.Model) : ViewModel(),Main
     enum class CounterState {
         INITIAL,
         INC,
-        DEC
+        DEC,
     }
 }
